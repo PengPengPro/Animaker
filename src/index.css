@@ -1,0 +1,103 @@
+/* stylelint-disable */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here.
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+    --background: 0 0% 100%;
+    --foreground: 270 50% 10%;
+    --card: 0 0% 100%;
+    --card-foreground: 270 50% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 270 50% 10%;
+    --primary: 270 70% 55%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 280 80% 65%;
+    --secondary: 260 60% 92%;
+    --secondary-foreground: 270 50% 20%;
+    --muted: 260 40% 96%;
+    --muted-foreground: 270 20% 50%;
+    --accent: 270 60% 95%;
+    --accent-foreground: 270 70% 40%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 260 30% 90%;
+    --input: 260 30% 90%;
+    --ring: 270 70% 55%;
+    --chart-1: 270 70% 55%;
+    --chart-2: 280 65% 60%;
+    --chart-3: 260 60% 50%;
+    --chart-4: 290 70% 65%;
+    --chart-5: 250 65% 60%;
+    --sidebar-background: 270 60% 98%;
+    --sidebar-foreground: 270 50% 20%;
+    --sidebar-primary: 270 70% 55%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 270 60% 95%;
+    --sidebar-accent-foreground: 270 70% 40%;
+    --sidebar-border: 260 30% 90%;
+    --sidebar-ring: 270 70% 55%;
+  }
+
+  .dark {
+    --background: 270 50% 5%;
+    --foreground: 0 0% 95%;
+    --card: 270 40% 8%;
+    --card-foreground: 0 0% 95%;
+    --popover: 270 40% 8%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 270 70% 60%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 280 80% 70%;
+    --secondary: 270 30% 15%;
+    --secondary-foreground: 0 0% 95%;
+    --muted: 270 30% 12%;
+    --muted-foreground: 270 20% 60%;
+    --accent: 270 40% 18%;
+    --accent-foreground: 270 70% 80%;
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 270 30% 18%;
+    --input: 270 30% 18%;
+    --ring: 270 70% 60%;
+    --chart-1: 270 70% 60%;
+    --chart-2: 280 65% 65%;
+    --chart-3: 260 60% 55%;
+    --chart-4: 290 70% 70%;
+    --chart-5: 250 65% 65%;
+    --sidebar-background: 270 50% 8%;
+    --sidebar-foreground: 0 0% 90%;
+    --sidebar-primary: 270 70% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 270 40% 15%;
+    --sidebar-accent-foreground: 0 0% 90%;
+    --sidebar-border: 270 30% 18%;
+    --sidebar-ring: 270 70% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .gradient-text {
+    background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+}
